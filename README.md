@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskFlow
 
-## Getting Started
+**TaskFlow** é a interface web de um sistema de gerenciamento de tarefas com autenticação de usuários. Este repositório contém apenas o **frontend**, desenvolvido com **Next.js** e integrado a uma API escrita em **GoLang** (disponível no repositório [TaskFlowAPI](https://github.com/artturalvaro/TaskFlowAPI)).
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Axios**
+- **Tailwind CSS**
+- **JWT (via API)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Registro e login de usuários
+- Validação de sessão com JWT
+- Visualização de tarefas
+- Criação, edição e exclusão de tarefas
+- Interface responsiva e amigável
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como Rodar o Projeto
 
-## Learn More
+### Requisitos
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (v16 ou superior)
+- API rodando localmente (consulte [TaskFlowAPI](https://github.com/artturalvaro/TaskFlowAPI))
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Passos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone o repositório**
+   git clone https://github.com/artturalvaro/TaskFlow.git
+   cd TaskFlow
 
-## Deploy on Vercel
+2. **Instale as dependências**
+   npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Configure as variáveis de ambiente**
+   Crie um arquivo `.env.local` com:
+   NEXT_PUBLIC_API_URL=http://localhost:8000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Execute o projeto**
+   npm run dev
+
+Acesse a aplicação em http://localhost:3000.
+
+## Estrutura do Projeto
+
+
+- `app/` – Páginas da aplicação usando App Router (Next.js 13+)
+- `components/` – Componentes reutilizáveis
+- `services/` – Arquivos para requisições à API
+- `lib/` – Funções auxiliares como autenticação e cookies
+- `types/` – Tipagens TypeScript
+- `utils/` – Validações e funções genéricas
+- `styles/` – Estilos globais da aplicação
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
